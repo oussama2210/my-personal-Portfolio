@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "C:\\Users\\Dz1634\\Desktop\\portfolio\\portfolios",
+                "C:\\Users\\Dz1634\\Desktop\\portfolio\\portfolios"
+            ]
+        }
+    }
+}
