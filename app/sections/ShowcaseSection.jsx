@@ -45,10 +45,10 @@ const ShowcaseSection = () => {
         {/* Featured Project - Full Width */}
         {featuredProject && (
           <div className="mt-16 mb-12">
-            <div className="relative group bg-black-100 border border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+            <div className="relative group bg-black-100 border border-blue-500/30 rounded-2xl overflow-hidden hover:border-blue-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Image Side */}
-                <div className="relative h-96 md:h-auto overflow-hidden bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+                <div className="relative h-96 md:h-auto overflow-hidden bg-gradient-to-br from-blue-950/20 to-blue-900/20">
                   <img
                     src={featuredProject.image}
                     alt={featuredProject.title}
@@ -57,7 +57,7 @@ const ShowcaseSection = () => {
 
                   {/* Featured Badge */}
                   <div className="absolute top-6 left-6">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full shadow-lg">
+                    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full shadow-lg">
                       <svg className="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
@@ -75,7 +75,7 @@ const ShowcaseSection = () => {
 
                 {/* Content Side */}
                 <div className="p-8 md:p-10 flex flex-col justify-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                     {featuredProject.title}
                   </h2>
 
@@ -90,7 +90,7 @@ const ShowcaseSection = () => {
                       {featuredProject.techStack.map((tech, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-2 px-3 py-2 bg-black-200 hover:bg-purple-600/20 rounded-lg border border-white/5 hover:border-purple-500/50 transition-all group/tech"
+                          className="flex items-center gap-2 px-3 py-2 bg-black-200 hover:bg-blue-600/20 rounded-lg border border-white/5 hover:border-blue-500/50 transition-all group/tech"
                           title={tech.name}
                         >
                           <img
@@ -111,12 +111,24 @@ const ShowcaseSection = () => {
 
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-4">
+                    {featuredProject.caseStudyUrl && (
+                      <a
+                        href={featuredProject.caseStudyUrl}
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg transition-all hover:scale-105 shadow-lg font-semibold"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        View Case Study
+                      </a>
+                    )}
+
                     {featuredProject.liveUrl && (
                       <a
                         href={featuredProject.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg transition-all hover:scale-105 shadow-lg font-semibold"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-700 text-white rounded-lg transition-all hover:scale-105 shadow-lg font-semibold"
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -144,7 +156,7 @@ const ShowcaseSection = () => {
 
               {/* Glow Effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-xl opacity-20" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl blur-xl opacity-20" />
               </div>
             </div>
           </div>

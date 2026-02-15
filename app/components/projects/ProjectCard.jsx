@@ -23,12 +23,12 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div
-      className={`project-card-${index} group relative bg-black-100 border border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20`}
+      className={`project-card-${index} group relative bg-black-100 border border-blue-500/30 rounded-2xl overflow-hidden hover:border-blue-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Image Container */}
-      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-blue-950/20 to-blue-900/20">
         <img
           src={project.image}
           alt={project.title}
@@ -46,7 +46,7 @@ const ProjectCard = ({ project, index }) => {
 
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+          <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
             {project.category}
           </span>
         </div>
@@ -57,12 +57,34 @@ const ProjectCard = ({ project, index }) => {
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
+          {project.caseStudyUrl && (
+            <a
+              href={project.caseStudyUrl}
+              className="group/btn flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all hover:scale-105 shadow-lg"
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <span className="text-sm font-semibold">Case Study</span>
+            </a>
+          )}
+
           {project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/btn flex items-center gap-2 px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-all hover:scale-105 shadow-lg"
+              className="group/btn flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all hover:scale-105 shadow-lg"
             >
               <svg
                 className="w-4 h-4"
@@ -104,7 +126,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Content */}
       <div className="p-6">
         {/* Title */}
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
           {project.title}
         </h3>
 
@@ -118,7 +140,7 @@ const ProjectCard = ({ project, index }) => {
           {project.techStack.map((tech, idx) => (
             <div
               key={idx}
-              className="group/tech relative flex items-center gap-1.5 px-2.5 py-1.5 bg-black-200 hover:bg-purple-600/20 rounded-lg border border-white/5 hover:border-purple-500/50 transition-all"
+              className="group/tech relative flex items-center gap-1.5 px-2.5 py-1.5 bg-black-200 hover:bg-blue-600/20 rounded-lg border border-white/5 hover:border-blue-500/50 transition-all"
               title={tech.name}
             >
               <img
@@ -143,7 +165,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-all"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -169,7 +191,7 @@ const ProjectCard = ({ project, index }) => {
 
       {/* Glow Effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30" />
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl blur opacity-30" />
       </div>
     </div>
   );

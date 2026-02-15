@@ -86,9 +86,9 @@ const ContactAnimation = () => {
   return (
     <div ref={containerRef} className="relative w-full h-full flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-purple-950 to-black">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-950 to-black">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }} />
       </div>
 
@@ -119,7 +119,7 @@ const ContactAnimation = () => {
             {/* Screen */}
             <div
               ref={screenRef}
-              className="w-96 h-64 bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg overflow-hidden relative"
+              className="w-96 h-64 bg-gradient-to-br from-blue-900 to-blue-950 rounded-lg overflow-hidden relative"
               style={{
                 boxShadow: '0 0 40px rgba(59, 130, 246, 0.4)',
               }}
@@ -194,7 +194,7 @@ const ContactAnimation = () => {
           style={{ animationDelay: '0s', animationDuration: '2s' }}>
           👋 Hi there!
         </div>
-        <div className="bg-purple-500 text-white px-4 py-2 rounded-2xl rounded-br-none shadow-lg animate-bounce"
+        <div className="bg-blue-500 text-white px-4 py-2 rounded-2xl rounded-br-none shadow-lg animate-bounce"
           style={{ animationDelay: '0.5s', animationDuration: '2s' }}>
           📧 Get in touch
         </div>

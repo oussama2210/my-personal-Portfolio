@@ -11,18 +11,18 @@ const TechStack = () => {
     gsap.fromTo(
       ".tech-card",
       {
-        y: 50,
+        y: 30,
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.8,
         ease: "power2.inOut",
-        stagger: 0.1,
+        stagger: 0.08,
         scrollTrigger: {
           trigger: "#skills",
-          start: "top center",
+          start: "top 80%",
         },
       }
     );
@@ -35,27 +35,25 @@ const TechStack = () => {
           title="How I Can Contribute & My Key Skills"
           sub="🤝 What I Bring to the Table"
         />
-        <div className="tech-grid">
+        <div className="grid grid-cols-3 md:grid-cols-5 xl:grid-cols-5 gap-4 md:gap-6 mt-12 max-w-5xl mx-auto">
           {techStackImgs.map((tech, index) => (
             <div
               key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg hover:border-purple-500/50 transition-all duration-300"
+              className="tech-card card-border overflow-hidden group rounded-xl hover:border-blue-500/50 transition-all duration-300 aspect-square"
             >
               <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                <div className="tech-icon-wrapper flex items-center justify-center">
+              <div className="relative h-full flex flex-col items-center justify-center p-4 gap-2">
+                <div className="flex items-center justify-center">
                   <img 
                     src={tech.imgPath} 
                     alt={tech.name}
-                    className="w-24 h-24 object-contain filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
+                    className="w-12 h-12 md:w-16 md:h-16 object-contain filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
                     style={{
-                      filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.3))',
+                      filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.3))',
                     }}
                   />
                 </div>
-                <div className="padding-x w-full">
-                  <p className="text-center">{tech.name}</p>
-                </div>
+                <p className="text-center text-xs md:text-sm text-white-50 group-hover:text-white transition-colors">{tech.name}</p>
               </div>
             </div>
           ))}

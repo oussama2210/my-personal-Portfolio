@@ -25,7 +25,7 @@ export default function BlogPost() {
     return null;
   }
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -41,7 +41,7 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link
             href="/#blog"
-            className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -65,10 +65,10 @@ export default function BlogPost() {
         )}
 
         <div className="max-w-4xl mx-auto px-6 -mt-32 relative z-20">
-          <div className="bg-black-100/90 backdrop-blur-md border border-purple-500/30 rounded-2xl p-8 md:p-12">
+          <div className="bg-black-100/90 backdrop-blur-md border border-blue-500/30 rounded-2xl p-8 md:p-12">
             {/* Category Badge */}
             <div className="mb-4">
-              <span className="px-4 py-2 bg-purple-600 text-white text-sm font-semibold rounded-full">
+              <span className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full">
                 {post.category}
               </span>
             </div>
@@ -81,7 +81,7 @@ export default function BlogPost() {
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 text-white-50 mb-6">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold">
                   {post.author.charAt(0)}
                 </div>
                 <span className="font-medium">{post.author}</span>
@@ -122,11 +122,12 @@ export default function BlogPost() {
         <div className="prose prose-invert prose-lg max-w-none">
           <ReactMarkdown
             components={{
-              code({ node, inline, className, children, ...props }) {
+              code({ className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '');
-                return !inline && match ? (
+                const isInline = !className;
+                return !isInline && match ? (
                   <SyntaxHighlighter
-                    style={vscDarkPlus}
+                    style={vscDarkPlus as any}
                     language={match[1]}
                     PreTag="div"
                     {...props}
@@ -134,13 +135,13 @@ export default function BlogPost() {
                     {String(children).replace(/\n$/, '')}
                   </SyntaxHighlighter>
                 ) : (
-                  <code className="bg-purple-600/20 px-1.5 py-0.5 rounded text-purple-300" {...props}>
+                  <code className="bg-blue-600/20 px-1.5 py-0.5 rounded text-blue-300" {...props}>
                     {children}
                   </code>
                 );
               },
               h2: ({ children }) => (
-                <h2 className="text-3xl font-bold mt-12 mb-6 text-white border-b border-purple-500/30 pb-4">
+                <h2 className="text-3xl font-bold mt-12 mb-6 text-white border-b border-blue-500/30 pb-4">
                   {children}
                 </h2>
               ),
@@ -165,14 +166,14 @@ export default function BlogPost() {
                 </ol>
               ),
               blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-purple-500 pl-4 py-2 my-6 bg-purple-900/10 rounded-r-lg">
+                <blockquote className="border-l-4 border-blue-500 pl-4 py-2 my-6 bg-blue-950/10 rounded-r-lg">
                   {children}
                 </blockquote>
               ),
               a: ({ href, children }) => (
                 <a
                   href={href}
-                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                  className="text-blue-400 hover:text-blue-300 underline transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -188,11 +189,11 @@ export default function BlogPost() {
 
       {/* Share Section */}
       <div className="max-w-4xl mx-auto px-6 py-12 border-t border-white/10">
-        <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-2xl p-8 text-center">
+        <div className="bg-gradient-to-r from-blue-950/30 to-blue-950/30 border border-blue-500/30 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Found this helpful?</h3>
           <p className="text-white-50 mb-6">Share it with your network!</p>
           <div className="flex justify-center gap-4">
-            <button className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors">
+            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">
               Share on Twitter
             </button>
             <button className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-colors">

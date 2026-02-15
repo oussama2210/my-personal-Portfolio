@@ -76,8 +76,8 @@ const Blog = () => {
               onClick={() => setSelectedCategory(category)}
               className={`category-filter px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/30'
-                  : 'bg-black-200 text-white-50 border border-white/10 hover:border-purple-500/50 hover:text-white'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/30'
+                  : 'bg-black-200 text-white-50 border border-white/10 hover:border-blue-500/50 hover:text-white'
               }`}
             >
               {category}
@@ -126,8 +126,8 @@ const Blog = () => {
         {/* No Posts Found */}
         {filteredPosts.length === 0 && (
           <div className="text-center py-20">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-purple-600/10 rounded-full mb-4">
-              <svg className="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-600/10 rounded-full mb-4">
+              <svg className="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -138,7 +138,7 @@ const Blog = () => {
 
         {/* CTA Section */}
         <div className="mt-20 text-center">
-          <div className="inline-block bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-2xl p-8 md:p-12">
+          <div className="inline-block bg-gradient-to-r from-blue-950/30 to-blue-900/30 border border-blue-500/30 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Want to stay updated?
             </h3>
@@ -150,9 +150,9 @@ const Blog = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full sm:w-auto px-6 py-3 bg-black-200 border border-white/10 rounded-lg text-white placeholder-white-50/50 focus:outline-none focus:border-purple-500 transition-colors"
+                className="w-full sm:w-auto px-6 py-3 bg-black-200 border border-white/10 rounded-lg text-white placeholder-white-50/50 focus:outline-none focus:border-blue-500 transition-colors"
               />
-              <button className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all hover:scale-105 shadow-lg">
+              <button className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all hover:scale-105 shadow-lg">
                 Subscribe
               </button>
             </div>

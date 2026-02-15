@@ -373,11 +373,11 @@ section {
 .gradient-line {
   width: 2px;
   background: linear-gradient(0deg,
-      rgba(69, 222, 196, 0) 0%,
-      #62e0ff 25%,
-      #52aeff 37.51%,
-      #fd5c79 62.83%,
-      #6d45ce 92.91%);
+      rgba(0, 0, 0, 0) 0%,
+      #1e3a8a 25%,
+      #3b82f6 37.51%,
+      #60a5fa 62.83%,
+      #1e40af 92.91%);
 }
 
 .gradient-edge:nth-of-type(1) {
@@ -495,15 +495,15 @@ section {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(168, 85, 247, 0.5);
+  background: rgba(59, 130, 246, 0.5);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(168, 85, 247, 0.7);
+  background: rgba(37, 99, 235, 0.8);
 }

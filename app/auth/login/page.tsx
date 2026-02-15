@@ -41,15 +41,15 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-black px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-blue-900/20 to-black px-4">
       <div className="max-w-md w-full">
         {/* Login Card */}
-        <div className="bg-black-100 border border-purple-500/30 rounded-2xl p-8 shadow-2xl">
+        <div className="bg-black-100 border border-blue-500/30 rounded-2xl p-8 shadow-2xl">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-600/20 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
               <svg
-                className="w-8 h-8 text-purple-400"
+                className="w-8 h-8 text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 bg-black-200 border border-black-50 rounded-lg text-white placeholder-white-50/50 focus:outline-none focus:border-purple-500 transition-colors"
+                className="w-full px-4 py-3 bg-black-200 border border-black-50 rounded-lg text-white placeholder-white-50/50 focus:outline-none focus:border-blue-500 transition-colors"
                 placeholder="admin@portfolio.com"
               />
             </div>
@@ -102,7 +102,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-4 py-3 bg-black-200 border border-black-50 rounded-lg text-white placeholder-white-50/50 focus:outline-none focus:border-purple-500 transition-colors"
+                className="w-full px-4 py-3 bg-black-200 border border-black-50 rounded-lg text-white placeholder-white-50/50 focus:outline-none focus:border-blue-500 transition-colors"
                 placeholder="••••••••"
               />
             </div>
@@ -111,7 +111,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -140,13 +140,13 @@ export default function LoginPage() {
           </form>
 
           {/* Demo Credentials */}
-          <div className="mt-6 p-4 bg-purple-600/10 border border-purple-500/30 rounded-lg">
+          <div className="mt-6 p-4 bg-blue-600/10 border border-blue-500/30 rounded-lg">
             <p className="text-xs text-white-50 text-center mb-2 font-semibold">Demo Credentials</p>
             <p className="text-xs text-white-50 text-center">
-              Email: <span className="text-purple-400 font-mono">admin@portfolio.com</span>
+              Email: <span className="text-blue-400 font-mono">admin@portfolio.com</span>
             </p>
             <p className="text-xs text-white-50 text-center">
-              Password: <span className="text-purple-400 font-mono">admin123</span>
+              Password: <span className="text-blue-400 font-mono">admin123</span>
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <a
               href="/"
-              className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
             >
               ← Back to Portfolio
             </a>

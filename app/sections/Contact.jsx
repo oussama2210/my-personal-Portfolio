@@ -109,7 +109,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-gradient-to-br from-blue-950 via-purple-950 to-black w-full h-full rounded-3xl overflow-hidden">
+            <div className="bg-gradient-to-br from-blue-950 via-blue-950 to-black w-full h-full rounded-3xl overflow-hidden">
               <ContactAnimation />
             </div>
           </div>

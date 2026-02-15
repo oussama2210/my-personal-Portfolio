@@ -35,12 +35,12 @@ const BlogCard = ({ post, index }) => {
   return (
     <Link href={`/blog/${post.slug}`}>
       <article
-        className={`blog-card-${index} group relative bg-black-100 border border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer`}
+        className={`blog-card-${index} group relative bg-black-100 border border-blue-500/30 rounded-2xl overflow-hidden hover:border-blue-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Image */}
-        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-950/20 to-blue-900/20">
           {post.image ? (
             <img
               src={post.image}
@@ -50,10 +50,10 @@ const BlogCard = ({ post, index }) => {
               }`}
             />
           ) : (
-            <div className={`w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center transition-transform duration-500 ${
+            <div className={`w-full h-full bg-gradient-to-br from-blue-600/20 to-blue-700/20 flex items-center justify-center transition-transform duration-500 ${
               isHovered ? 'scale-110' : 'scale-100'
             }`}>
-              <svg className="w-20 h-20 text-purple-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-20 h-20 text-blue-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
@@ -61,7 +61,7 @@ const BlogCard = ({ post, index }) => {
 
           {/* Category Badge */}
           <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+            <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
               {post.category}
             </span>
           </div>
@@ -99,7 +99,7 @@ const BlogCard = ({ post, index }) => {
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors line-clamp-2">
+          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
             {post.title}
           </h3>
 
@@ -126,7 +126,7 @@ const BlogCard = ({ post, index }) => {
           </div>
 
           {/* Read More Button */}
-          <div className="flex items-center gap-2 text-purple-400 hover:text-purple-300 text-sm font-semibold group-hover:gap-3 transition-all">
+          <div className="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-semibold group-hover:gap-3 transition-all">
             Read Article
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -136,7 +136,7 @@ const BlogCard = ({ post, index }) => {
 
         {/* Glow Effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl blur opacity-30" />
         </div>
       </article>
     </Link>

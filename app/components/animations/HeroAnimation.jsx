@@ -73,9 +73,9 @@ const HeroAnimation = () => {
   }, [particles]); // Depend on particles so GSAP runs after they render
 
   const sphereColors = [
-    'from-blue-500 to-purple-600',
-    'from-purple-500 to-pink-600',
-    'from-pink-500 to-red-600',
+    'from-blue-500 to-blue-600',
+    'from-blue-500 to-blue-600',
+    'from-blue-600 to-red-600',
     'from-cyan-500 to-blue-600',
     'from-green-500 to-cyan-600',
   ];
@@ -83,8 +83,8 @@ const HeroAnimation = () => {
   return (
     <div ref={containerRef} className="relative w-full h-full flex items-center justify-center overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black">
-        <div className="gradient-orb absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-blue-950/20 to-black">
+        <div className="gradient-orb absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl" />
         <div className="gradient-orb absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl"
           style={{ animationDelay: '2s' }} />
       </div>
@@ -119,9 +119,9 @@ const HeroAnimation = () => {
         {/* Central animated code window */}
         <div
           ref={codeRef}
-          className="relative z-10 bg-black/60 backdrop-blur-md rounded-2xl p-8 border border-purple-500/30 shadow-2xl"
+          className="relative z-10 bg-black/60 backdrop-blur-md rounded-2xl p-8 border border-blue-500/30 shadow-2xl"
           style={{
-            boxShadow: '0 0 60px rgba(168, 85, 247, 0.3)',
+            boxShadow: '0 0 60px rgba(59, 130, 246, 0.3)',
           }}
         >
           <div className="flex items-center gap-2 mb-4">
@@ -132,7 +132,7 @@ const HeroAnimation = () => {
 
           <div className="font-mono text-sm space-y-2">
             <div className="code-line text-cyan-400">
-              <span className="text-purple-400">const</span> developer = {'{'}
+              <span className="text-blue-400">const</span> developer = {'{'}
             </div>
             <div className="code-line text-green-400 pl-4">
               name: <span className="text-yellow-400">'Oussama'</span>,
@@ -154,11 +154,11 @@ const HeroAnimation = () => {
 
         {/* Rotating rings for depth effect */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-96 h-96 border-2 border-purple-500/20 rounded-full animate-spin-slow"
+          <div className="w-96 h-96 border-2 border-blue-500/20 rounded-full animate-spin-slow"
             style={{ animationDuration: '25s' }}></div>
           <div className="absolute w-80 h-80 border-2 border-blue-500/20 rounded-full animate-spin-slow"
             style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
-          <div className="absolute w-64 h-64 border-2 border-pink-500/20 rounded-full animate-spin-slow"
+          <div className="absolute w-64 h-64 border-2 border-blue-600/20 rounded-full animate-spin-slow"
             style={{ animationDuration: '25s' }}></div>
         </div>
       </div>
@@ -166,7 +166,7 @@ const HeroAnimation = () => {
       {/* Grid overlay for depth */}
       <div className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: 'linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px)',
           backgroundSize: '50px 50px',
           perspective: '1000px',
           transform: 'rotateX(60deg) scale(2)',
