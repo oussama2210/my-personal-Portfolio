@@ -40,6 +40,22 @@ const projects = [
   },
   {
     id: 2,
+    title: "AutoHub - Cars Marketplace Platform",
+    description: "A comprehensive full-stack car marketplace with real-time chat, advanced search filtering, authentication, and CDN-optimized image delivery for seamless browsing experience.",
+    image: "/images/cars1.png",
+    category: "Web App",
+    featured: false,
+    techStack: [
+      { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Appwrite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+    ],
+    liveUrl: "https://cars-market-place-app.vercel.app",
+    githubUrl: "https://github.com/oussama2210/cars-market-place-app",
+  },
+  {
+    id: 3,
     title: "DAPP TRADING PLATFORM",
     description: "A high-performance real-time cryptocurrency dashboard built with Next.js 16, Tailwind CSS v4, and TypeScript. Features live market data, interactive charting, and seamless Web3 wallet integration",
     image: "/images/TRADING.png",
@@ -54,22 +70,7 @@ const projects = [
     liveUrl: "https://crypto-trading-dapp.vercel.app",
     githubUrl: "https://github.com/oussama2210/crypto-trading-dapp",
   },
-  {
-    id: 3,
-    title: "YC Directory - Startup Showcase",
-    description: "A modern platform to discover and showcase innovative startups with filtering and search capabilities.",
-    image: "/images/project3.png",
-    category: "Web App",
-    featured: false,
-    techStack: [
-      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-      { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
-    ],
-    liveUrl: "https://yc-directory.vercel.app",
-    githubUrl: "https://github.com/yourusername/yc-directory",
-  },
+  
 ];
 
 const words = [

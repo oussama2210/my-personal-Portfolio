@@ -71,8 +71,8 @@ const AnimatedCounter = () => {
   ];
 
   return (
-    <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-32">
-      <div className="mx-auto grid-4-cols gap-6">
+    <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-16">
+      <div className="mx-auto grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
         {counterItems.map((item, index) => (
           <div
             key={index}
@@ -83,22 +83,22 @@ const AnimatedCounter = () => {
             <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500`} />
             
             {/* Card content */}
-            <div className="relative bg-black-100 border border-blue-500/20 rounded-2xl p-8 md:p-10 flex flex-col items-center justify-center hover:border-blue-500/40 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+            <div className="relative bg-black-100 border border-blue-500/20 rounded-2xl p-6 md:p-8 xl:p-10 flex flex-col items-center justify-center hover:border-blue-500/40 transition-all duration-300 backdrop-blur-sm overflow-hidden min-h-[180px] md:min-h-[200px]">
               {/* Background gradient orb */}
               <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${gradients[index]} rounded-full opacity-10 group-hover:opacity-20 blur-3xl transition-opacity duration-500`} />
               
               {/* Icon */}
-              <div className="counter-icon text-5xl md:text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="counter-icon text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
                 {icons[index]}
               </div>
               
               {/* Number */}
-              <div className="counter-number text-white text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-br from-white to-blue-200 bg-clip-text text-transparent">
+              <div className="counter-number text-white text-4xl md:text-5xl xl:text-6xl font-bold mb-2 md:mb-3 bg-gradient-to-br from-white to-blue-200 bg-clip-text text-transparent">
                 0{item.suffix}
               </div>
               
               {/* Label */}
-              <div className="text-white-50 text-sm md:text-base text-center font-medium group-hover:text-white transition-colors duration-300">
+              <div className="text-white-50 text-xs md:text-sm xl:text-base text-center font-medium group-hover:text-white transition-colors duration-300">
                 {item.label}
               </div>
 
